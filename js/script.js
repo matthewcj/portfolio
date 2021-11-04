@@ -130,3 +130,33 @@ function portfolioItemDetails(portfolioItem){
 
 
 
+
+
+
+// Contact
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz3oDL26wZBlNjCWLj3YNtDdRmC5_rqc4aXEE6W8gGy8KLfIqpmWvenNq3nkERphVpV/exec'
+const form = document.forms['matthew-contact-form']
+// const btnKirim = document.querySelector('.btn-kirim');
+// const btnLoading = document.querySelector('.btn-loading');
+const alert = document.querySelector('.alert');
+
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+// ketika tombol submit diklik
+// tampilkan tombol loading, hilangkan tombol kirim
+// btnLoading.classList.toggle('d-none');
+// btnKirim.classList.toggle('d-none');
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => {
+    // tampilkan tombol kirim, hilangkan tombol
+    // btnLoading.classList.toggle('d-none');
+    // btnKirim.classList.toggle('d-none');
+    // tampilkan alert
+    alert.classList.toggle('d-none');
+    // reset form
+    form.reset();
+    console.log('Success!', response)
+  })
+  .catch(error => console.error('Error!', error.message))
+})
