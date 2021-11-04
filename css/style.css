@@ -234,6 +234,7 @@ button{
 
 
 
+
 /* Animation Keyframes */
 @keyframes fadeIn{
 	0%{
@@ -1036,6 +1037,15 @@ button{
 	background-color: var(--main-color);
 }
 
+.alert{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.d-none{
+	visibility: hidden;
+}
 
 
 
