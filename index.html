@@ -252,7 +252,7 @@
 					<button type="button" class="btn view-project-btn">view project</button>
 					<div class="portfolio-item-details">
 						<div class="description">
-							<p>open on desktop for better experience.</p>
+							<h3>only for desktop version.</h3>
 						</div>
 						<div class="general-info">
 							<ul>
@@ -275,7 +275,7 @@
 					<button type="button" class="btn view-project-btn">view project</button>
 					<div class="portfolio-item-details">
 						<div class="description">
-							<p>open on desktop for better experience.</p>
+							<h3>only for desktop version.</h3>
 						</div>
 						<div class="general-info">
 							<ul>
@@ -386,26 +386,28 @@
 
 			<div class="row">
 				<div class="contact-form">
-					<form>
+					<h2 class="alert d-none" role="alert"><strong>Thanks!</strong> your message has been sent.</h2>
+					<form name="matthew-contact-form" action="">
 						<div class="row">
 							<div class="input-group">
-								<input type="text" placeholder="Name" class="input-control" required="">
+								<input type="text" name="firstname" id="firstname" placeholder="Name" class="input-control" required>
+							</div>
+
+
+							<div class="input-group">
+								<input type="text" name="lastname" id="lastname" placeholder="Subject" class="input-control" required>
 							</div>
 
 							<div class="input-group">
-								<input type="text" placeholder="Email" class="input-control" required="">
+								<input type="text" name="email" id="email" placeholder="Email" class="input-control" required>
 							</div>
 
 							<div class="input-group">
-								<input type="text" placeholder="Subject" class="input-control" required="">
-							</div>
-
-							<div class="input-group">
-								<textarea class="input-control" placeholder="Message" required></textarea>
+								<textarea class="input-control" name="message" id="message" placeholder="Message" required></textarea>
 							</div>
 
 							<div class="submit-btn">
-								<button class="btn" type="submit">send message</button>
+								<button class="btn btn-kirim" type="submit" value="Submit">send message</button>
 							</div>
 						</div>
 					</form>
@@ -459,7 +461,7 @@
 </div>
 <!-- Portfolio Item Details Popup End -->
 
-  
+
 <script src="js/script.js"></script>
 </body>
 </html>
